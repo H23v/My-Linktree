@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     if (profileClicks === 4) {
       // Al quarto click, cambio immagine definitiva e rimuovo listener
-      profileImg.src = '/Immagini/profilo-death.png';
+      profileImg.src = 'Immagini/profilo-death.png';
       profileImg.removeEventListener('click', handleProfileClick);
     }
   }
@@ -38,8 +38,8 @@ document.addEventListener('DOMContentLoaded', () => {
   function setDynamicBackground() {
     const h = new Date().getHours();
     document.body.style.backgroundImage = h >= 17
-      ? "url('Immagini/Skybox-ntt2.jpg')"
-      : "url('Immagini/Skybox-grn2.jpg')";
+      ? "Immagini/Skybox-ntt2.jpg"
+      : "Immagini/Skybox-grn2.jpg";
   }
   setDynamicBackground();
 
@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Sfondo unico per HACK
         document.body.style.transition = 'background-image 0.5s ease-in-out';
-        document.body.style.backgroundImage = "url('/Immagini/Skybox-hack.jpg')";
+        document.body.style.backgroundImage = "Immagini/Skybox-hack.jpg";
 
         // Nascondo b1 e cuoricino
         b1.style.display = 'none';
@@ -172,7 +172,9 @@ document.addEventListener('DOMContentLoaded', () => {
         privacyLink.textContent = 'Privacy Policy';
         modalContent.style.background = 'rgba(249, 146, 235, 0.979)';
         modalTitle.textContent = '°.☆°Privacy Policy°☆.';
-        modalText.innerHTML = `…testo privacy…`;
+        modalText.innerHTML = `Non raccogliamo alcun dato personale. Questo sito non utilizza cookie né tracker. Tutte le informazioni restano
+        sul tuo dispositivo. <br /> <br /> © 2025 - Tutti i diritti sono riservati. Ti invito a provare a creare la tua personale pagina di
+        link se vuoi, buona fortuna :)`;
 
         setDefaultLinks();
 
