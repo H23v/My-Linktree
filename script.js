@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     if (profileClicks === 4) {
       // Al quarto click, cambio immagine definitiva e rimuovo listener
-      profileImg.src = 'Immagini/profilo-death.png';
+      profileImg.src = 'profilod.png';
       profileImg.removeEventListener('click', handleProfileClick);
     }
   }
@@ -38,8 +38,8 @@ document.addEventListener('DOMContentLoaded', () => {
   function setDynamicBackground() {
     const h = new Date().getHours();
     document.body.style.backgroundImage = h >= 17
-      ? "Immagini/Skybox-ntt2.jpg"
-      : "Immagini/Skybox-grn2.jpg";
+      ? "skyboxntt2.jpg"
+      : "skyboxgrn2.jpg";
   }
   setDynamicBackground();
 
@@ -66,8 +66,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Random site per 💞
   const sites = [
-    'Randomsite/Cloudyland.html',
-    'Randomsite/Buttons_Oasis.html',
+    'Cloudyland.html',
+    'Buttons_Oasis.html',
     'ComingSoon2.html'
   ];
   const heartLink = document.getElementById('heartLink');
@@ -120,7 +120,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       if (isDefault) {
         // Stato HACK
-        if (profileClicks < 4) img.src = 'Immagini/ProfiloE3.png';
+        if (profileClicks < 4) img.src = 'profilo2.png';
         eLnk.href = 'mailto:collettivo.hack@gmail.com';
         titleEl.textContent = 'HACK';
         subtitle.innerHTML = 'Found the Duo<br>| Co-founder of HACK |';
@@ -139,7 +139,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Sfondo unico per HACK
         document.body.style.transition = 'background-image 0.5s ease-in-out';
-        document.body.style.backgroundImage = "Immagini/Skybox-hack.jpg";
+        document.body.style.backgroundImage = "skybox3.jpg";
 
         // Nascondo b1 e cuoricino
         b1.style.display = 'none';
@@ -165,7 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
         line2.style.marginLeft = '-98%';
       } else {
         // Stato default
-        if (profileClicks < 4) img.src = 'Immagini/ProfiloE2.png';
+        if (profileClicks < 4) img.src = 'profilo1.png';
         eLnk.href = 'mailto:chiarabertasini@hotmail.it';
         titleEl.textContent = '©hiara';
         subtitle.innerHTML = 'Media Artist_Net-Art Student…';
