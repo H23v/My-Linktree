@@ -34,13 +34,12 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   profileImg.addEventListener('click', handleProfileClick);
 
-  // Funzione per sfondo dinamico basato sull'ora
-  function setDynamicBackground() {
-    const h = new Date().getHours();
-    document.body.style.backgroundImage = h >= 17
-      ? "skyboxntt2.jpg"
-      : "skyboxgrn2.jpg";
-  }
+function setDynamicBackground() {
+  const h = new Date().getHours();
+  document.body.style.backgroundImage = h >= 17
+    ? "url('skyboxntt2.jpg')"
+    : "url('skyboxgrn2.jpg')";
+}
   setDynamicBackground();
 
   // Wave animation
@@ -139,7 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Sfondo unico per HACK
         document.body.style.transition = 'background-image 0.5s ease-in-out';
-        document.body.style.backgroundImage = "skybox3.jpg";
+        document.body.style.backgroundImage = "url('skybox3.jpg')";
 
         // Nascondo b1 e cuoricino
         b1.style.display = 'none';
